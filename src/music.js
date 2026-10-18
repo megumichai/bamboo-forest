@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import trackUrl from './assets/original-point.m4a'
+import trackUrl from './assets/original-point.mp3'
 
 const VOLUME = 0.38
 
