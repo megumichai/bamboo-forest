@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#140e09" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Cstyle%3E.ink%7Bfill:%233f6b3a%7D.cane%7Bstroke:%233f6b3a%7D@media%20(prefers-color-scheme:dark)%7B.ink%7Bfill:%239ac68c%7D.cane%7Bstroke:%239ac68c%7D%7D%3C/style%3E%3Cg%20class='ink'%3E%3Cpath%20d='M16.5%209.6L16.26%209.28L16%208.99L15.74%208.72L15.47%208.45L15.19%208.18L14.9%207.92L14.6%207.66L14.29%207.4L13.97%207.15L13.63%206.91L13.28%206.67L12.91%206.43L12.53%206.2L12.13%205.97L11.71%205.75L11.28%205.53L10.83%205.31L10.37%205.09L9.88%204.87L9.38%204.65L8.87%204.43L8.34%204.21L7.79%203.99L7.2%203.8L7.2%203.8L7.52%204.33L7.87%204.81L8.23%205.28L8.59%205.72L8.95%206.14L9.32%206.54L9.7%206.92L10.08%207.27L10.46%207.61L10.85%207.92L11.24%208.21L11.64%208.47L12.04%208.71L12.45%208.92L12.86%209.1L13.27%209.26L13.68%209.4L14.09%209.51L14.5%209.59L14.91%209.65L15.31%209.69L15.71%209.7L16.1%209.68L16.5%209.6Z'/%3E%3Cpath%20d='M16.3%2011.6L16%2011.47L15.7%2011.38L15.39%2011.31L15.08%2011.25L14.77%2011.22L14.46%2011.2L14.14%2011.19L13.82%2011.21L13.5%2011.24L13.18%2011.29L12.87%2011.35L12.55%2011.44L12.24%2011.54L11.92%2011.67L11.61%2011.81L11.31%2011.96L11.01%2012.14L10.71%2012.33L10.41%2012.53L10.12%2012.75L9.83%2012.98L9.54%2013.23L9.26%2013.5L9%2013.8L9%2013.8L9.4%2013.81L9.78%2013.79L10.15%2013.76L10.51%2013.73L10.86%2013.69L11.21%2013.65L11.54%2013.6L11.87%2013.55L12.19%2013.49L12.5%2013.42L12.8%2013.34L13.1%2013.26L13.39%2013.17L13.67%2013.07L13.95%2012.96L14.22%2012.84L14.49%2012.71L14.76%2012.58L15.02%2012.44L15.28%2012.29L15.53%2012.14L15.79%2011.97L16.05%2011.8L16.3%2011.6Z'/%3E%3Cpath%20d='M16.8%207.6L17.21%207.47L17.58%207.31L17.95%207.15L18.31%206.99L18.66%206.83L19.01%206.67L19.35%206.5L19.68%206.33L20.01%206.15L20.33%205.96L20.65%205.77L20.96%205.57L21.27%205.35L21.57%205.13L21.87%204.91L22.17%204.67L22.47%204.42L22.77%204.16L23.07%203.9L23.37%203.62L23.68%203.34L23.99%203.04L24.3%202.74L24.6%202.4L24.6%202.4L24.14%202.38L23.7%202.41L23.27%202.46L22.84%202.52L22.42%202.61L22%202.71L21.6%202.84L21.21%202.98L20.82%203.14L20.45%203.32L20.09%203.52L19.74%203.73L19.41%203.97L19.09%204.23L18.78%204.5L18.49%204.79L18.22%205.09L17.96%205.41L17.72%205.74L17.5%206.08L17.29%206.44L17.1%206.81L16.93%207.19L16.8%207.6Z'/%3E%3C/g%3E%3Cg%20class='cane'%20fill='none'%20stroke-linecap='round'%3E%3Cpath%20d='M19.4%2031.2C18.8%2024%2017.6%2012%2016.2%203'%20stroke-width='2.8'%20stroke-linecap='butt'/%3E%3Cpath%20d='M16.7%2022.6h4.4'%20stroke-width='1.1'/%3E%3Cpath%20d='M15.7%2015.4h4.2'%20stroke-width='1.1'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <title>渝州城外 · 竹林</title>
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+
+    <div class="hud">
+      <header class="title" id="title">
+        <h1 id="title-text">渝州城外 · 竹林</h1>
+      </header>
+
+      <div class="hint" id="hint">
+        <span class="hint__arrow">↑</span>
+        <span class="hint__text">向上滚动</span>
+      </div>
+
+      <aside class="map" id="map" aria-hidden="true">
+        <p class="map__label">竹林小径</p>
+        <svg
+          class="map__canvas"
+          viewBox="0 0 240 135"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <clipPath id="map-clip">
+              <rect x="0" y="0" width="240" height="135" rx="10" />
+            </clipPath>
+          </defs>
+
+          <rect class="map__panel" x="0" y="0" width="240" height="135" rx="10" />
+          <g clip-path="url(#map-clip)">
+            <g id="map-world">
+              <path class="map__trail" id="map-trail" />
+              <g class="map__city" id="map-city" transform="translate(139 19)">
+                <path
+                  class="map__city-gate"
+                  d="M-5.5 3V0.5L-2.75 -2.25 0 0.5 2.75 -2.25 5.5 0.5V3M-5.5 3H5.5"
+                />
+                <text class="map__city-label" y="13" text-anchor="middle">
+                  渝州城
+                </text>
+              </g>
+            </g>
+          </g>
+          <g class="map__walker" id="map-walker">
+            <circle class="map__walker-halo" r="7" />
+            <circle class="map__walker-dot" r="2.6" />
+          </g>
+        </svg>
+      </aside>
+
+      <aside class="music">
+        <button
+          class="music-toggle"
+          id="music-toggle"
+          type="button"
+          aria-pressed="false"
+        >
+          ♪ 音乐 关
+        </button>
+      </aside>
+
+      <div class="noscript" id="fallback" hidden>
+        <p>你的浏览器或显卡暂时无法运行 WebGL。</p>
+        <p>请使用最新版 Chrome / Edge / Firefox / Safari。</p>
+      </div>
+    </div>
+
+    <div id="scroll-space" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
